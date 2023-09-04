@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 @available(iOS 14, macOS 11.0, *)
-struct ReloadButton: View {
-    var tapHandler: () -> Void
+public struct ReloadButton: View {
+    public var tapHandler: () -> Void
     
-    var body: some View {
+    public var body: some View {
         VStack {
             Button(action: {
                 tapHandler()

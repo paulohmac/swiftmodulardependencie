@@ -3,12 +3,12 @@ import Foundation
 import SwiftUI
 
 @available(iOS 14, macOS 11.0, *)
-struct CustomerView: View {
+public struct CustomerView: View {
     @State private var showMessageBox = false
 
     let customer: Customer?
 
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text(customer?.name ?? "")
                 .font(.system(size: 16))

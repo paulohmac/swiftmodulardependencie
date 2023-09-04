@@ -23,4 +23,10 @@ public struct CustomerView: View {
         .padding()
         .background(Color.white)
     }
+    
+    public init(showMessageBox :Bool, customer: Customer?){
+        _showMessageBox = State(initialValue: showMessageBox)
+        self.customer = customer
+    }
+    
 }

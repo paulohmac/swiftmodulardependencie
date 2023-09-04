@@ -20,4 +20,9 @@ public struct ReloadButton: View {
             }
         }
     }
+    
+    public init(tapHandler : @escaping () -> Void){
+        self.tapHandler = tapHandler
+    }
+    
 }

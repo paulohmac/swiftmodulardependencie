@@ -11,7 +11,7 @@ import Foundation
 @available(iOS 15,macOS 10.15.0, *)
 public struct ServiceFactory{
     
-    static func getServiceInstance()->ServerRequest{
+    public static func getServiceInstance()->ServerRequest{
         return ServerHttpRequest()
     }
 }

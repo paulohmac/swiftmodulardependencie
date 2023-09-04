@@ -19,7 +19,7 @@ private  struct Constants  {
 }
 
 @available(iOS 15,macOS 10.15.0, *)
-class  ServerHttpRequest: ServerRequest{
+open class  ServerHttpRequest: ServerRequest{
     var url : URL {
         get {
             return URL(staticString: Constants.url)

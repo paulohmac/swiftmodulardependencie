@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Customer : Identifiable, Codable{
+open struct Customer : Identifiable, Codable{
     var id: String
     var profileImage: String
     var name: String

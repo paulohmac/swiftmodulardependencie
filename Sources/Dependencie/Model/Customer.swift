@@ -7,8 +7,8 @@
 
 import Foundation
 
-open struct Customer : Identifiable, Codable{
-    var id: String
-    var profileImage: String
-    var name: String
+public struct Customer : Identifiable, Codable{
+    public var id: String
+    public var profileImage: String
+    public var name: String
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ServerRequest{
+public protocol ServerRequest{
     var url : URL { get }
 
     @available(iOS 15,macOS 10.15.0, *)
@@ -20,13 +20,13 @@ private  struct Constants  {
 
 @available(iOS 15,macOS 10.15.0, *)
 open class  ServerHttpRequest: ServerRequest{
-    var url : URL {
+    public var url : URL {
         get {
             return URL(staticString: Constants.url)
         }
     }
     
-    func getCustomerAccount() async throws -> [Customer]? {
+    public func getCustomerAccount() async throws -> [Customer]? {
         print("@@Load customers")
         let data = try await sendRequest(url: self.url)
         guard let jsonData = data else { return nil }
@@ -39,7 +39,7 @@ open class  ServerHttpRequest: ServerRequest{
 extension ServerRequest{
 
     @available(iOS 15,macOS 10.15.0, *)
-    func sendRequest(url : URL)async throws -> Data?{
+    public func sendRequest(url : URL)async throws -> Data?{
         let (data, _) = try await URLSession.shared.data(from: url)
         return data
     }
